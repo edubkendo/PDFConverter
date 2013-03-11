@@ -1,0 +1,29 @@
+.label {
+  -fx-padding: 10px;
+}
+.text-area {
+  -fx-font: normal 20px System;
+}
+#text_container {
+  -fx-font-family: monospace;
+}
+#vboxTextContainer {
+  -fx-padding: 20px;
+}
+#menuBar {
+  -fx-background-color: linear-gradient(from 0% 0% to 100% 50% , #708090, #fff8dc, #000000, #696969);
+  -fx-alignment: center-left;
+}
+#menuBar .button {
+    -fx-background-color:
+        linear-gradient(#f2f2f2, #d6d6d6),
+        linear-gradient(#fcfcfc 0%, #d9d9d9 20%, #d6d6d6 100%),
+        linear-gradient(#dddddd 0%, #f6f6f6 50%);
+    -fx-background-radius: 8,7,6;
+    -fx-background-insets: 0,1,2;
+    -fx-text-fill: black;
+    -fx-effect: dropshadow( three-pass-box , rgba(0,0,0,0.6) , 5, 0.0 , 0 , 1 );
+    }
+.label .text {
+  -fx-fill: white;
+}

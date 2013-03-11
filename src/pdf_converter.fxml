@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet pdf.css?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" style="" xmlns:fx="http://javafx.com/fxml">
+  <!-- TODO Add Nodes -->
+  <children>
+    <HBox fx:id="menuBar" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+      <children>
+        <Button minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#openText" text="Open File">
+          <font>
+            <Font size="20.0" fx:id="x1" />
+          </font>
+        </Button>
+        <Button font="$x1" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#previewPDF" text="Preview" />
+        <Button font="$x1" minHeight="30.0" minWidth="100.0" mnemonicParsing="false" onAction="#savePDF" text="Save PDF" />
+        <Label font="$x1" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" text="Chars per Line:">
+          <stylesheets>
+            <URL value="@pdf.css" />
+          </stylesheets>
+        </Label>
+        <TextArea fx:id="charsPerLine" maxHeight="-Infinity" minHeight="-Infinity" prefHeight="50.0" prefWidth="200.0" promptText="80" style="" />
+      </children>
+    </HBox>
+    <VBox fx:id="vboxTextContainer" prefHeight="-1.0" prefWidth="-1.0" style="" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0">
+      <children>
+        <TextFlow fx:id="text_container" />
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@pdf.css" />
+  </stylesheets>
+</AnchorPane>
