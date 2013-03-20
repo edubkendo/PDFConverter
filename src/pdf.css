@@ -1,11 +1,16 @@
+/*hack to get ProgressBar working*/
+.progress-bar {
+  -fx-skin: "com.sun.javafx.scene.control.skin.ProgressBarSkin";
+}
 .label {
   -fx-padding: 10px;
 }
 .text-area {
   -fx-font: normal 20px System;
 }
-#text_container {
-  -fx-font-family: monospace;
+#text_list .list-cell {
+  /*-fx-font-family: monospace;*/
+  -fx-background-color: #FFFFFF;
 }
 #vboxTextContainer {
   -fx-padding: 20px;
