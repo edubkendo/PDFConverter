@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.*?>
+<?scenebuilder-stylesheet progress.css?>
+
+<fx:root type="javafx.scene.layout.HBox" fx:id="for_pbar" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="300.0" style="" xmlns:fx="http://javafx.com/fxml">
+  <children>
+    <VBox fx:id="vboxTextContainer" alignment="CENTER" prefHeight="200.0" prefWidth="300.0" style="">
+      <children>
+        <Text fx:id="processing_text" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading" />
+      </children>
+    </VBox>
+  </children>
+  <stylesheets>
+    <URL value="@progress.css" />
+  </stylesheets>
+</fx:root>
