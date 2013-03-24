@@ -42,11 +42,19 @@ class PDFConverterController
     task = PDFGenerator.new
 
 
-    prog_alert = ProgressAlert.new()
+    prog_alert = ProgressAlert.new(task)
     prog_alert.p_bar.progress_property.bind(task.progress_property)
     root_anchor.children.add prog_alert
     prog_alert.translateX = (root_anchor.scene.width - prog_alert.pref_width)/2
     prog_alert.translateY = (root_anchor.scene.height - prog_alert.pref_height)/2
+
+    remove_prog_alert = Proc.new do
+      root_anchor.children.remove prog_alert
+    end
+
+    task.setOnSucceeded(remove_prog_alert)
+    task.setOnCancelled(remove_prog_alert)
+    task.setOnFailed(remove_prog_alert)
 
     JThread.new(task).start()
   end

@@ -2,6 +2,7 @@
 
 <?import java.lang.*?>
 <?import java.net.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.HBox?>
@@ -14,6 +15,11 @@
     <VBox fx:id="vboxTextContainer" alignment="CENTER" prefHeight="200.0" prefWidth="300.0" style="">
       <children>
         <Text fx:id="processing_text" strokeType="OUTSIDE" strokeWidth="0.0" text="Loading" />
+        <Button fx:id="cancel_button" mnemonicParsing="false" text="Cancel">
+          <VBox.margin>
+            <Insets top="10.0" />
+          </VBox.margin>
+        </Button>
       </children>
     </VBox>
   </children>
