@@ -7,6 +7,7 @@ class ProgressAlert < Java::javafx::scene::layout::HBox
     for_pbar
     vboxTextContainer
     cancel_button
+    cancel_button.setCancelButton true
 
     p_bar = ProgressBar.new
     @p_bar = p_bar
@@ -22,7 +23,7 @@ class ProgressAlert < Java::javafx::scene::layout::HBox
   def cancel_task(button, task)
     button.set_on_mouse_clicked do |event|
       if task.isRunning
-        task.cancel(true)
+        task.cancel()
       end
     end
   end

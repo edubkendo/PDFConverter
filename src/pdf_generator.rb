@@ -10,8 +10,10 @@ class PDFGenerator < Java::javafx.concurrent.Task
       begin
         puts num
         self.updateProgress(num, tw)
-      rescue InterruptedException => e
-        break if self.isCancelled()
+        return if self.isCancelled()
+      rescue java.lang.InterruptedException => e
+        puts "#{e}"
+        return "Cancelled"
       end
     end
     puts "Done"
