@@ -7,12 +7,10 @@ class ProgressAlert < Java::javafx::scene::layout::HBox
     for_pbar
     vboxTextContainer
     cancel_button
-    cancel_button.setCancelButton true
 
     p_bar = ProgressBar.new
     @p_bar = p_bar
     vboxTextContainer.children.add 1, p_bar
-
     cancel_task(cancel_button, task)
   end
 
